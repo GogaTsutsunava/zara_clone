@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="shop.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="main-navigation">
+            <div class="d-flex logo">
+
+                <div>
+                    <div class="hamburger-main menu-button" id="toggleMenuButton">&#9776</div>
+                </div>
+
+                <div class="navigation ">
+                    <a href="index.html"><img src="./Images/Standard.png" alt="logo"> </a>
+                    <ul>
+                        <li>
+                            <a href="">Woman</a>
+                        </li>
+                        <li>
+                            <a href="">Man</a>
+                        </li>
+                        <li>
+                            <a href="">Kids</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hamburger-div hidden">
+                    <div class="second-div ">
+                        <div>
+                            <div style="align-items: end;" class="category">NEW</div>
+                        </div>
+                        <div>
+                            <div class="category">COATS | TRENCH COATS</div>
+                            <div class="category">JACKETS</div>
+                            <div class="category">BLAZERS</div>
+                        </div>
+                        <div>
+                            <div class="category">WAISTCOATS | GILETS</div>
+                            <div class="category">DRESSES | JUMPSUIT</div>
+                        </div>
+
+                        <div>
+                            <div class="category">TOPS | BODYSUITS</div>
+                            <div class="category">KNITWEAR</div>
+                            <div class="category">SHIRTS</div>
+                        </div>
+                        <div>
+                            <div class="category">T-SHIRTS</div>
+                            <div class="category">SWEATSHIRTS</div>
+                            <div class="category">TROUSERS</div>
+                            <div class="category">JEANS</div>
+                            <div class="category">SKIRTS | SHORTS</div>
+                        </div>
+                        <div>
+                            <div class="category">SHOES</div>
+                            <div class="category">BAGS</div>
+                            <div class="category">ACCESSORIES | JEWELLERY</div>
+                        </div>
+                        <div>
+                            <div class="category">LINGERIE | PYJAMAS</div>
+                            <div class="category">SUITS</div>
+                            <div class="category">CO-ORDSETS</div>
+                            <div class="category">LOUNGEWEAR</div>
+                        </div>
+                        <div>
+                            <div class="category">WORKERS</div>
+                            <div class="category">BASICS</div>
+                            <div class="category">SPECIAL PRICES</div>
+                        </div>
+                        <div>
+                            <div class="category">JOIN LIFE</div>
+                            <div class="category">+ INFO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mySidepanel" class="sidepanel">
+                <div>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                </div>
+                <div class="second-div2 ">
+                    <a href="index.html"><img class="burger-logo" src="./Images/Standard.png" alt="logo"> </a>
+                    <div>
+                        <hr>
+                        <ul class="burger-category">
+                            <li>
+                                <a href="">Woman</a>
+                            </li>
+                            <li>
+                                <a href="">Man</a>
+                            </li>
+                            <li>
+                                <a href="">Kids</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="div-div" style="margin-left: 10px;">
+                        <div>
+                            <div class="category">NEW</div>
+                        </div>
+                        <div>
+                            <div class="category">COATS | TRENCH COATS</div>
+                            <div class="category">JACKETS</div>
+                            <div class="category">BLAZERS</div>
+                        </div>
+                        <div>
+                            <div class="category">WAISTCOATS | GILETS</div>
+                            <div class="category">DRESSES | JUMPSUIT</div>
+                        </div>
+    
+                        <div>
+                            <div class="category">TOPS | BODYSUITS</div>
+                            <div class="category">KNITWEAR</div>
+                            <div class="category">SHIRTS</div>
+                        </div>
+                        <div>
+                            <div class="category">T-SHIRTS</div>
+                            <div class="category">SWEATSHIRTS</div>
+                            <div class="category">TROUSERS</div>
+                            <div class="category">JEANS</div>
+                            <div class="category">SKIRTS | SHORTS</div>
+                        </div>
+                        <div>
+                            <div class="category">SHOES</div>
+                            <div class="category">BAGS</div>
+                            <div class="category">ACCESSORIES | JEWELLERY</div>
+                        </div>
+                        <div>
+                            <div class="category">LINGERIE | PYJAMAS</div>
+                            <div class="category">SUITS</div>
+                            <div class="category">CO-ORDSETS</div>
+                            <div class="category">LOUNGEWEAR</div>
+                        </div>
+                        <div>
+                            <div class="category">WORKERS</div>
+                            <div class="category">BASICS</div>
+                            <div class="category">SPECIAL PRICES</div>
+                        </div>
+                        <div>
+                            <div class="category">JOIN LIFE</div>
+                            <div class="category">+ INFO</div>
+                        </div>
+                    </div>
+                    </div>
+
+                <ul class="d-flex log2">
+                    <li>LOG IN</li>
+                    <li>HELP</li>
+                    <li>SHOPPING BAG (0)</li>
+                </ul>
+            </div>
+            <div class="search1 d-flex" role="search" aria-label="product search">
+                <div>
+                    <input type="text" class=" search-a" placeholder="SEARCH" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="text-content">
+                <ul class="d-flex log">
+                    <li>LOG IN</li>
+                    <li>HELP</li>
+                    <li>SHOPPING BAG (0)</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </header>
+    <div class="card-div" id="product">
+
+    </div>
+    <script src="product.js"></script>
+</body>
+
+</html>

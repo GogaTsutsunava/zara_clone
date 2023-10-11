@@ -1,0 +1,346 @@
+* {
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-button {
+  font-size: 20px;
+  cursor: pointer;
+}
+.navigation {
+  display: flex;
+  gap: 250px;
+  padding-top: 10px;
+}
+.navigation img {
+  width: 250px;
+}
+.main-div {
+  padding-top: 20px;
+}
+.log {
+  gap: 20px;
+  font-size: 12px;
+  padding-top: 20px;
+}
+.hidden {
+  display: none;
+}
+.log li {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.navigation1 {
+  display: flex;
+  justify-content: space-between;
+}
+.hamburger-div {
+  background-color: rgb(245, 243, 240);
+  height: 800px;
+  width: 450px;
+  position: absolute;
+  left: 15%;
+  border: 2px solid black;
+  z-index: -99;
+}
+.search-a {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  font-size: 12px;
+  align-items: center;
+  width: 450px;
+  background-color: white;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 30px;
+}
+.log2 {
+  gap: 20px;
+  font-size: 12px;
+  padding-top: 20px;
+}
+.navigation ul {
+  display: flex;
+  gap: 15px;
+}
+.log {
+  gap: 20px;
+  font-size: 12px;
+  padding-top: 20px;
+}
+.log li {
+  cursor: pointer;
+}
+.card-div{
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-top: 15%;
+}
+.image{
+  border: 0.5px solid black;
+}
+.main-images{
+  width: 400px;
+}
+.text {
+  /* border: 0.5px solid black; */
+  border-top: 0.5px solid black;
+   /* border-right: none; */
+  /* border-left: none;  */
+  /* width: 30px; */
+  /* padding: 10; */
+  /* align-items: center; */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 16px;
+  /* display: flex; */
+  justify-content: center;
+  /* flex-direction: column; */
+  /* vertical-align: baseline; */
+}
+.text {
+  display: flex;
+  flex-direction: column;
+}
+.save {
+  display: flex;
+  cursor: pointer;
+}
+
+.save-button {
+  margin-left: auto; /* This pushes the SVG to the right */
+  cursor: pointer;
+}
+.hamburger-main {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: start;
+  cursor: pointer;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 200px;
+}
+
+.second-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  /* display: none; */
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  transform: translate(-5%, -50%);
+}
+.hidden {
+  display: none;
+}
+.navigation ul {
+  display: flex;
+  gap: 15px;
+}
+.log {
+  gap: 20px;
+  font-size: 12px;
+  padding-top: 20px;
+}
+.log li {
+  cursor: pointer;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-around;
+  gap: 150px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.menu-button {
+  font-size: 20px;
+  cursor: pointer;
+}
+.hamburger-main {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: start;
+  cursor: pointer;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 200px;
+}
+.navigation img {
+  width: 300px;
+  animation: change 3s ease 400ms;
+}
+.navigation {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.category {
+  background-color: white;
+  border: 1px solid black;
+  font-size: smaller;
+  padding: 5px;
+  display: inline-block;
+  margin: auto;
+  cursor: pointer;
+}
+.second-div2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  /* display: none; */
+}
+.div-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 10px;
+}
+.card-title {
+  margin-left: 20px;
+}
+.second-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  /* display: none; */
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  transform: translate(-5%, -50%);
+}
+
+.none {
+  display: none;
+  background-color: none !important;
+  height: 0px !important;
+  width: 0 !important;
+  border: 2px solid black;
+  z-index: 1 !important;
+}
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(245, 243, 240);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.burger-logo {
+  width: 200px;
+}
+.burger-category {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  margin-right: 20px;
+}
+@media screen and (max-width: 1500px) {
+  .logo {
+    gap: 30px;
+  }
+  .search-a {
+    display: flex;
+    width: 100%;
+    /* justify-content: flex-end; */
+    padding-right: 0px;
+    font-size: 12px;
+    align-items: center;
+    /* width: 100%; */
+    /* background-color: white; */
+    height: 30px;
+    border: 1px solid;
+    position: absolute;
+
+    animation: none;
+  }
+  .navigation img {
+    width: 250px;
+    animation: none;
+  }
+  .hamburger-main {
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 0px;
+  }
+  .hamburger {
+    width: 15px;
+    height: 1px;
+  }
+  .text-content {
+    display: none;
+  }
+  .main-navigation {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    gap: 50px;
+  }
+  .card-div {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
