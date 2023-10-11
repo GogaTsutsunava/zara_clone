@@ -5,7 +5,71 @@ document.addEventListener("DOMContentLoaded", function () {
   let isUserScrolling = false;
   let autoScrollPaused = false;
   let autoScrollTimeout;
-  let autoScrollInterval = null; // Initialize to null
+  let touchStartY = null; // Declare touchStartY in a higher scope
+
+// Function to start or stop auto-scroll
+function updateAutoScroll() {
+  if (window.innerWidth > 992 && !autoScrollPaused) {
+    startAutoScroll();
+  } else {
+    stopAutoScroll();
+  }
+}
+
+// Event listener for window resize
+window.addEventListener("resize", function () {
+  updateAutoScroll(); // Update auto-scroll when the window is resized
+});
+
+
+// Call the function to set the initial auto-scroll state
+
+// Event listener for touchstart (initial touch position)
+document.addEventListener("touchstart", function (event) {
+  touchStartY = event.touches[0].clientY;
+});
+
+// Event listener for touchend (detect swipe)
+document.addEventListener("touchend", function (event) {
+  if (touchStartY !== null) {
+    const touchEndY = event.changedTouches[0].clientY;
+    const touchYDiff = touchEndY - touchStartY;
+
+    if (touchYDiff > 0) {
+      // Swipe down, go to the previous photo
+      scrollToPreviousPhoto();
+    } else if (touchYDiff < 0) {
+      // Swipe up, go to the next photo
+      scrollToNextPhoto();
+    }
+
+    touchStartY = null; // Reset touchStartY
+  }
+});
+
+  // Event listener for touchstart (initial touch position)
+document.addEventListener("touchstart", function (event) {
+  touchStartY = event.touches[0].clientY;
+});
+
+// Event listener for touchend (detect swipe)
+document.addEventListener("touchend", function (event) {
+  if (touchStartY !== null) {
+      const touchEndY = event.changedTouches[0].clientY;
+      const touchYDiff = touchEndY - touchStartY;
+
+      if (touchYDiff > 0) {
+          // Swipe down, go to the next photo
+          scrollToNextPhoto();
+      } else if (touchYDiff < 0) {
+          // Swipe up, go to the previous photo
+          scrollToPreviousPhoto();
+      }
+
+      touchStartY = null; // Reset touchStartY
+  }
+});
+
 
   // Initially, display the first photo
   photos[currentPhoto].classList.add("active");
@@ -75,29 +139,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Event listener for mousewheel or touchpad scrolling
-  document.addEventListener("wheel", function (event) {
-    if (!isUserScrolling) {
-      stopAutoScroll(); // Stop auto-scroll only if it's not already stopped
-    }
-    isUserScrolling = true;
-    clearTimeout(autoScrollTimeout);
-    autoScrollTimeout = setTimeout(function () {
-      isUserScrolling = false;
-      startAutoScroll();
-    }, 3000); // Resume auto-scroll after 3 seconds of inactivity
 
-    if (event.deltaY > 0) {
-      scrollToNextPhoto();
-    } else {
-      scrollToPreviousPhoto();
-    }
-  });
+
+ // Event listener for mousewheel or touchpad scrolling
+ document.addEventListener("wheel", function (event) {
+  if (!isUserScrolling) {
+    stopAutoScroll(); // Stop auto-scroll only if it's not already stopped
+  }
+  isUserScrolling = true;
+  clearTimeout(autoScrollTimeout);
+  autoScrollTimeout = setTimeout(function () {
+    isUserScrolling = false;
+    startAutoScroll();
+  }, 3000); // Resume auto-scroll after 3 seconds of inactivity
+
+  if (event.deltaY > 0) {
+    scrollToNextPhoto();
+  } else {
+    scrollToPreviousPhoto();
+  }
+});
+});
 
   // Event listener for arrow keys
   document.addEventListener("keydown", function (event) {
     if (!isUserScrolling) {
-      stopAutoScroll(); // Stop auto-scroll only if it's not already stopped
+      startAutoScroll(); // Stop auto-scroll only if it's not already stopped
     }
     isUserScrolling = true;
     clearTimeout(autoScrollTimeout);
@@ -112,14 +179,14 @@ document.addEventListener("DOMContentLoaded", function () {
       scrollToPreviousPhoto();
     }
   });
-});
+
 
 // ... (The rest of your existing code)
 
 // Event listener for arrow keys
 document.addEventListener("keydown", function (event) {
   if (!isUserScrolling) {
-    stopAutoScroll(); // Stop auto-scroll only if it's not already stopped
+    startAutoScroll(); // Stop auto-scroll only if it's not already stopped
   }
   isUserScrolling = true;
   clearTimeout(autoScrollTimeout);
@@ -171,24 +238,3 @@ toggleMenuButton.addEventListener("click", function () {
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
-
-// Function to retrieve all saved items from local storage
-function getAllSavedItems() {
-  const savedItems = [];
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    if (key.startsWith("savedItem_")) {
-      const savedItem = JSON.parse(localStorage.getItem(key));
-      savedItems.push(savedItem);
-    }
-  }
-  return savedItems;
-}
-
-// Get all saved items
-const savedItems = getAllSavedItems();
-
-// Display the saved items in your favorites list
-savedItems.forEach((item) => {
-  // Display the item as you need in your favorites list
-});

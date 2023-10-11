@@ -1,7 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
+body .photo-container{
+  scroll-behavior: smooth;
+}
 .photo-container {
   position: relative;
   overflow: hidden;
@@ -249,7 +251,7 @@ a {
   justify-content: end;
 }
 .white {
-  color: #ddb4b4;
+  color: #C0C0C0;
 }
 @media screen and (max-width: 992px) {
   .main-navigation {

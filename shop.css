@@ -343,4 +343,7 @@ a {
     justify-content: center;
     width: 100%;
   }
+  .main-images{
+    width: 350px;
+  }
 }
